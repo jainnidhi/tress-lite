@@ -35,15 +35,14 @@ if (get_theme_mod('tress_front_featured_portfolio_check')) {
     </div>
    
 
-            <div id="featured-portfolio" class="flexslider">
-                <ul class="slides">
+            <div id="featured-portfolio">
+                <div class="portfolio-wrap">
                 
                 <?php if ($featuredportfolio->have_posts()) : $i = 1; ?>
 
                     <?php while ($featuredportfolio->have_posts()) : $featuredportfolio->the_post(); ?>
                     
-                    <li>
-                        <div class="home-featured-portfolio">
+                        <div class="home-featured-portfolio grid_4_of_12 col">
 
                             <div class="featured-portfolio-content">
 
@@ -62,7 +61,7 @@ if (get_theme_mod('tress_front_featured_portfolio_check')) {
                             </a>
                            
                         </div><!--end .home-featured-portfolio-->
-                    </li>
+                   
                         <?php $i+=1; ?>
 
                     <?php endwhile; ?>
@@ -73,7 +72,7 @@ if (get_theme_mod('tress_front_featured_portfolio_check')) {
                     <p class="center"><?php esc_html_e('Sorry, but you are looking for something that is not here', 'tress'); ?></p>
                     <?php get_search_form(); ?>
                 <?php endif; ?>
-           </ul>         
+           </div>         
         </div> <!-- /#featured-portfolio -->
 
       

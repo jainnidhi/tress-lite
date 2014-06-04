@@ -1158,17 +1158,11 @@ select {
 .home-featured-portfolio{
     padding:10px;
     border:1px solid #eee;
-    margin-left:20px;
-    display:table;
     text-align:center;
+    margin-bottom:20px;
 }
 
-
-.featured-portfolio-content >*{
-    display:table-cell;
-    vertical-align:middle;
-}
-#featured-portfolio li:first-child{
+.home-featured-portfolio:nth-of-type(3n+1){
     margin-left:0;
 }
 
@@ -1178,6 +1172,13 @@ select {
     box-shadow:none;
 }
 
+#featured-portfolio:after{
+    content:".";
+    display:block;
+    height:0px;
+    clear:both;
+    visibility:hidden;
+}
 #featured-portfolio h3{
     text-align:center;
 }
@@ -3507,7 +3508,14 @@ img#wpstats {
         width: 100%;
         margin-bottom: 20px;
     }
-
+    
+    .home-featured-portfolio{
+        float:none;
+        margin-bottom:20px;
+    }
+    .portfolio .portfolio-image >*{
+        display:block;
+    }
     .page .portfolio{
         margin: 0 auto 20px;
         width:350px;
