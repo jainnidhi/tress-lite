@@ -144,11 +144,6 @@ function tress_customize_register($wp_customize) {
             'blue' => __('Blue', 'tress'),
             'red' => __('Red', 'tress'),
             'green' => __('Green', 'tress'),
-            'yellow' => __('Yellow', 'tress'),
-            'purple' => __('Purple', 'tress'),
-            'orange' => __('Orange', 'tress'),
-            'brown' => __('Brown', 'tress'),
-            'pink' => __('Pink', 'tress'),
         ),
     ));
     
