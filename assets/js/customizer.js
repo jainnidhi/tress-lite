@@ -327,52 +327,14 @@
 			$( '#tslider3 .client-name a' ).attr('href', to );
 		} );
             } );
-        wp.customize( 'tslider_four', function( value ) {
-		value.bind( function( to ) {
-			$( '#tslider4 img' ).attr('src', to );
-		} );
-	} );
-         wp.customize( 'tslider_four_description', function( value ) {
-		value.bind( function( to ) {
-			$( '#reviewslider #tslider4 .flex-caption p' ).text( to );
-		} );
-	} );
-        wp.customize( 'client_name_four', function( value ) {
-		value.bind( function( to ) {
-			$( '#tslider4 .client-name a' ).text( to );
-		} );
-	} );
-         wp.customize( 'client_name_url_four', function( value ) {
-		value.bind( function( to ) {
-			$( '#tslider4 .client-name a' ).attr('href', to );
-		} );
-            } );
+       
             
          wp.customize( 'tress_portfolio_title', function( value ) {
 		value.bind( function( to ) {
 			$( '.home-portfolio-title h3' ).text( to );
 		} );
 	} );
-        wp.customize( 'tslider_five', function( value ) {
-		value.bind( function( to ) {
-			$( '#tslider5 img' ).attr('src', to );
-		} );
-	} );
-         wp.customize( 'tslider_five_description', function( value ) {
-		value.bind( function( to ) {
-			$( '#reviewslider #tslider5 .flex-caption p' ).text( to );
-		} );
-	} );
-        wp.customize( 'client_name_five', function( value ) {
-		value.bind( function( to ) {
-			$( '#tslider5 .client-name a' ).text( to );
-		} );
-	} );
-         wp.customize( 'client_name_url_five', function( value ) {
-		value.bind( function( to ) {
-			$( '#tslider5 .client-name a' ).attr('href', to );
-		} );
-            } );
+       
          wp.customize( 'tress_footer_footer_text', function( value ) {
 		value.bind( function( to ) {
 			$( '.smallprint p' ).text( to );

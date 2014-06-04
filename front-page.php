@@ -271,33 +271,6 @@ get_header();
                         </div>
                     </li>
                     
-                    <li id="tslider4">
-                        <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/img4.jpg" alt=""/>
-                        <div class="flex-caption">
-                            <div class="client-testimonial">
-                                <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'tress') ?> </p>
-                            </div>
-                            <div class="client-name">
-                                 <a class="client" href="#">
-                                    <?php esc_html_e('-John', 'tress') ?>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li id="tslider5">
-                        <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/img5.jpg" alt=""/>
-                        <div class="flex-caption">
-                            <div class="client-testimonial">
-                                <p><?php esc_html_e('Showcase your multiple services and let users understand about your business.', 'tress') ?> </p>
-                            </div>
-                            <div class="client-name">
-                                 <a class="client" href="#">
-                                    <?php esc_html_e('-John', 'tress') ?>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
                     <?php } ?>
                     
                      <?php if ( get_theme_mod('tslider_one') !='' ) {  ?>
@@ -351,42 +324,6 @@ get_header();
                             </div>
                          </div>
                      <?php } ?>
-                    </li>
-                    
-                     <?php if ( get_theme_mod('tslider_four') !='' ) {  ?>
-                     <li id="tslider4"> 
-                        <img  src="<?php echo get_theme_mod('tslider_four'); ?>" alt=""/>
-                        <?php } ?>
-                      <?php if ( get_theme_mod('tslider_four_description') !='' || get_theme_mod('client_name_url_four') !='' || get_theme_mod('client_name_four') !='' ) {  ?>
-                        <div class="flex-caption">
-                            <div class="client-testimonial">
-                                <?php echo wpautop(esc_html(get_theme_mod('tslider_four_description'))); ?>
-                            </div>
-                            <div class="client-name">
-                                 <a href="<?php echo esc_url(get_theme_mod('client_name_url_four')); ?>">
-                                     <?php echo esc_html(get_theme_mod('client_name_four')); ?>
-                                 </a>
-                            </div>
-                       </div>
-                      <?php } ?>
-                    </li>
-                    
-                     <?php if ( get_theme_mod('tslider_five') !='' ) {  ?>
-                     <li id="tslider5"> 
-                        <img  src="<?php echo get_theme_mod('tslider_five'); ?>" alt=""/>
-                        <?php } ?>
-                        <?php if ( get_theme_mod('tslider_five_description') !='' || get_theme_mod('client_name_url_five') !='' || get_theme_mod('client_name_five') !='' ) {  ?>
-                        <div class="flex-caption">
-                            <div class="client-testimonial">
-                                <?php echo wpautop(esc_html(get_theme_mod('tslider_five_description'))); ?>
-                            </div>
-                            <div class="client-name">
-                                 <a href="<?php echo esc_url(get_theme_mod('client_name_url_five')); ?>">
-                                     <?php echo esc_html(get_theme_mod('client_name_five')); ?>
-                                 </a>
-                            </div>
-                         </div>
-                        <?php } ?>
                     </li>
                     
                  <?php } ?>
