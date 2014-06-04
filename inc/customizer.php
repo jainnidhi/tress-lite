@@ -845,18 +845,6 @@ function tress_customize_register($wp_customize) {
             'type' => 'checkbox',
         ));
 
-        // select number of posts for featured posts on front page
-        $wp_customize->add_setting('tress_front_featured_posts_count', array(
-            'default' => 3,
-            'sanitize_callback' => 'sanitize_text_field',
-            'transport'=> 'postMessage',
-        ));
-        $wp_customize->add_control('tress_front_featured_posts_count', array(
-            'label' => __('Number of posts to display', 'tress'),
-            'section' => 'tress_front_page_post_options',
-            'settings' => 'tress_front_featured_posts_count',
-            'priority' => 20,
-        ));
            // select category for featured posts 
         $wp_customize->add_setting('tress_front_featured_posts_cat', array('default' => 0,));
         $wp_customize->add_control(new WP_Customize_Dropdown_Categories_Control($wp_customize, 'tress_front_featured_posts_cat', array(

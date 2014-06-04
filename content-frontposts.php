@@ -11,7 +11,7 @@
 // Start a new query for displaying featured posts on Front Page
 
 if (get_theme_mod('tress_front_featured_posts_check')) {
-    $featured_count = intval(get_theme_mod('tress_front_featured_posts_count'));
+    $featured_count = intval(3);
     $var = get_theme_mod('tress_front_featured_posts_cat');
 
     // if no category is selected then return 0 
