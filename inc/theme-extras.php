@@ -449,7 +449,7 @@ function tress_woocommerce_image_dimensions() {
 }
 
 
-function woocommerce_output_related_products() {
+function tress_woocommerce_output_related_products() {
 woocommerce_related_products(4,4); // Display 4 products in rows of 3
 }
 
