@@ -75,11 +75,7 @@
 			$( '#slider1 img' ).attr('src', to );
 		} );
 	} );
-        wp.customize( 'slider_one_url', function( value ) {
-		value.bind( function( to ) {
-			$( '#slider1 .flex-caption h2 a' ).attr('href', to );
-		} );
-	} );
+       
          wp.customize( 'slider_one_description', function( value ) {
 		value.bind( function( to ) {
 			$( '#slider1 .flex-caption p' ).text( to );
@@ -105,11 +101,7 @@
 			$( '#slider2 .flex-caption h2 a' ).text( to );
 		} );
 	} );
-         wp.customize( 'slider_two_url', function( value ) {
-		value.bind( function( to ) {
-			$( '#slider2 .flex-caption h2 a' ).attr('href', to );
-		} );
-	} );
+        
          wp.customize( 'slider_two_description', function( value ) {
 		value.bind( function( to ) {
 			$( '#slider2 .flex-caption p' ).text( to );

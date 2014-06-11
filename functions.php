@@ -28,7 +28,7 @@ include get_template_directory() . '/inc/plugin-activation/plugin-details.php';
  * @since Tress 1.0
  */
 if ( ! isset( $content_width ) )
-	$content_width = 790; /* Default the embedded content width to 790px */
+	$content_width = 726; /* Default the embedded content width to 790px */
 
 
 /**
@@ -69,13 +69,7 @@ if ( ! function_exists( 'tress_setup' ) ) {
                  add_image_size('post-thumb', 716, 400, true); // custom thumbnail for post  
 		// Create an extra image size for the Post thumbnail image
 		add_image_size( 'post_feature_thumb', 368, 243, true );
-                
-                // hard crop store front and taxonomy product images for downloads
-                add_image_size( 'product-image-large', 680, 300, true );
-                
-                // hard crop store front and taxonomy product images thumbnail for downloads
-                add_image_size( 'product-image-thumb', 370, 243, true );
-                
+               
                 
 		// This theme uses wp_nav_menu() in one location
 		register_nav_menus( array(
@@ -138,7 +132,6 @@ function tress_scripts_styles() {
 	wp_enqueue_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'assets/js/modernizr-2.7.1-min.js', array(), '2.7.1', false );
         wp_enqueue_script('jquery'); 
         wp_enqueue_script('tress-slider', get_template_directory_uri() . '/assets/js/jquery.flexslider-min.js', array('jquery'));
-        wp_enqueue_script('tress-smint', get_template_directory_uri() . '/assets/js/jquery.smint.js', array());
 	wp_enqueue_script( 'tress-slicknav', get_template_directory_uri() . '/assets/js/jquery.slicknav.min.js' );
         wp_enqueue_script('tress-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js', array(), '1.0', 'all', false);
         
