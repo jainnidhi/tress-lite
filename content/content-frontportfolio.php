@@ -77,4 +77,75 @@ if (get_theme_mod('tress_front_featured_portfolio_check')) {
 
       
 <?php
-} // end Featured portfolio query ?>
+} else { // end Featured portfolio query ?>
+        <div class="home-portfolio-title-area" id="portfolio-title">
+            <div class="home-portfolio-title section-title">
+                <h3><?php esc_html_e('Recent Portfolio', 'tress') ?></h3>
+                         
+            </div>
+    </div>
+   
+
+            <div id="featured-portfolio">
+                <div class="portfolio-wrap">
+                    
+                        <div class="home-featured-portfolio grid_4_of_12 col">
+
+                            <div class="featured-portfolio-content">
+
+                                <a href="<?php the_permalink(); ?>">
+                                <img alt='' width="310" height="205" src='<?php echo get_template_directory_uri(); ?>/assets/images/img1.jpg' />
+                                    <span><i class="fa fa-link"></i></span>
+                                </a>
+                               
+                            </div> <!--end .featured-post-content -->
+
+                            <a href="<?php the_permalink(); ?>">
+
+                                <h4 class="home-featured-portfolio-title">Portfolio #1</h4>
+
+                            </a>
+                           
+                        </div><!--end .home-featured-portfolio-->
+                        
+                        <div class="home-featured-portfolio grid_4_of_12 col">
+
+                            <div class="featured-portfolio-content">
+
+                                <a href="<?php the_permalink(); ?>">
+                                <img alt='' width="310" height="205" src='<?php echo get_template_directory_uri(); ?>/assets/images/img2.jpg' />
+                                    <span><i class="fa fa-link"></i></span>
+                                </a>
+                               
+                            </div> <!--end .featured-post-content -->
+
+                            <a href="<?php the_permalink(); ?>">
+
+                                <h4 class="home-featured-portfolio-title">Portfolio #2</h4>
+
+                            </a>
+                           
+                        </div><!--end .home-featured-portfolio-->
+                        
+                        <div class="home-featured-portfolio grid_4_of_12 col">
+
+                            <div class="featured-portfolio-content">
+
+                                <a href="<?php the_permalink(); ?>">
+                                <img alt='' width="310" height="205" src='<?php echo get_template_directory_uri(); ?>/assets/images/img3.jpg' />
+                                    <span><i class="fa fa-link"></i></span>
+                                </a>
+                               
+                            </div> <!--end .featured-post-content -->
+
+                            <a href="<?php the_permalink(); ?>">
+
+                                <h4 class="home-featured-portfolio-title">Portfolio #3</h4>
+
+                            </a>
+                           
+                        </div><!--end .home-featured-portfolio-->
+                   
+           </div>         
+        </div> <!-- /#featured-portfolio -->
+<?php } ?>
