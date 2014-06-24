@@ -17,7 +17,8 @@
  */
 function tress_customize_register($wp_customize) {
     
-     $wp_customize->get_section( 'header_image'  )->priority     = 33;
+     $wp_customize->get_section( 'header_image'  )->priority     = 26;
+     $wp_customize->get_section( 'nav'  )->priority     = 27;
 
     /** ===============
      * Extends CONTROLS class to add textarea
@@ -67,7 +68,7 @@ function tress_customize_register($wp_customize) {
     // Add new section for theme layout and color schemes
     $wp_customize->add_section('tress_notification_bar_settings', array(
         'title' => __('Notification Bar', 'tress'),
-        'priority' => 29,
+        'priority' => 30,
     ));
     
     // enable notification bar on front page?
@@ -124,7 +125,7 @@ function tress_customize_register($wp_customize) {
     // Add new section for theme layout and color schemes
     $wp_customize->add_section('tress_theme_layout_settings', array(
         'title' => __('Color Scheme', 'tress'),
-        'priority' => 30,
+        'priority' => 29,
     ));
 
    
@@ -152,7 +153,7 @@ function tress_customize_register($wp_customize) {
       // Add new section for custom favicon settings
     $wp_customize->add_section('tress_custom_favicon_setting', array(
         'title' => __('Custom Favicon', 'tress'),
-        'priority' => 31,
+        'priority' => 77,
     ));
     
     
@@ -172,7 +173,7 @@ function tress_customize_register($wp_customize) {
      // Add new section for custom favicon settings
     $wp_customize->add_section('tress_tracking_code_setting', array(
         'title' => __('Tracking Code', 'tress'),
-        'priority' => 32,
+        'priority' => 76,
     ));
     
     $wp_customize->add_setting('tracking_code', array('default' => '',
@@ -889,7 +890,7 @@ function tress_customize_register($wp_customize) {
             // Add new section for Home Feedback Title settings
     $wp_customize->add_section('feedback_title_setting', array(
         'title' => __('Testimonial Title', 'tress'),
-        'priority' => 62,
+        'priority' => 53,
     ));
     
     // home Title
@@ -910,7 +911,7 @@ function tress_customize_register($wp_customize) {
         // Add new section for Testimonial slider settings
     $wp_customize->add_section('testimonial_slider_setting', array(
         'title' => __('Testimonial Slider', 'tress'),
-        'priority' => 63,
+        'priority' => 54,
     ));
 
     $wp_customize->add_setting('tslider_one', array(
@@ -960,7 +961,7 @@ function tress_customize_register($wp_customize) {
             ));
         
         $wp_customize->add_control('client_name_url_one', array(
-            'label' => __('Name URL', 'tress'),
+            'label' => __('URL', 'tress'),
             'section' => 'testimonial_slider_setting',
             'settings' => 'client_name_url_one',
             'priority' => 4,
@@ -1013,7 +1014,7 @@ function tress_customize_register($wp_customize) {
             ));
         
         $wp_customize->add_control('client_name_url_two', array(
-            'label' => __('Name URL', 'tress'),
+            'label' => __('URL', 'tress'),
             'section' => 'testimonial_slider_setting',
             'settings' => 'client_name_url_two',
             'priority' => 8,
@@ -1066,7 +1067,7 @@ function tress_customize_register($wp_customize) {
             ));
         
         $wp_customize->add_control('client_name_url_three', array(
-            'label' => __('Name URL', 'tress'),
+            'label' => __('URL', 'tress'),
             'section' => 'testimonial_slider_setting',
             'settings' => 'client_name_url_three',
             'priority' => 12,
@@ -1111,18 +1112,6 @@ function tress_customize_register($wp_customize) {
     )));
     
    
-    // Disable one page navigation on front page.
-    $wp_customize->add_setting('tress_one_page_nav_check', array(
-        'default' => 0, 
-        'sanitize_callback' => 'tress_sanitize_checkbox',
-    ));
-    $wp_customize->add_control('tress_one_page_nav_check', array(
-        'label' => __('Disable one page navigation', 'tress'),
-        'section' => 'nav',
-        'priority' => 10,
-        'type' => 'checkbox',
-    ));
-
     //remove default customizer sections
     $wp_customize->remove_section('background_image');
     $wp_customize->remove_section('colors');

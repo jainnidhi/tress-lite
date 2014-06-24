@@ -583,6 +583,14 @@ select {
     padding:10px 0;
     color:#fff;
 }
+
+.notification-wrap p{
+    margin:0;
+    text-align:right;
+    float: left;
+    width: 50%;
+    margin-right: 10px;
+}
 .notification-text,
 .notification-link{
     width:50%;
@@ -3663,6 +3671,21 @@ img#wpstats {
 
     .slick-nav a{
         padding:10px;
+    }
+    
+    .notification-bar{
+        position:relative;
+        top:48px;
+        z-index:0;
+    }
+    
+    .main-navigation{
+        position:fixed;
+        top:0;
+    }
+    
+    .slider-wrapper .flex-caption{
+        display:none;
     }
 
 }
