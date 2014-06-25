@@ -94,14 +94,14 @@ if (get_theme_mod('tress_front_featured_portfolio_check')) {
 
                             <div class="featured-portfolio-content">
 
-                                <a href="<?php the_permalink(); ?>">
+                                <a href="#">
                                 <img alt='' width="310" height="205" src='<?php echo get_template_directory_uri(); ?>/assets/images/img1.jpg' />
                                     <span><i class="fa fa-link"></i></span>
                                 </a>
                                
                             </div> <!--end .featured-post-content -->
 
-                            <a href="<?php the_permalink(); ?>">
+                            <a href="#">
 
                                 <h4 class="home-featured-portfolio-title">Portfolio #1</h4>
 
@@ -113,14 +113,14 @@ if (get_theme_mod('tress_front_featured_portfolio_check')) {
 
                             <div class="featured-portfolio-content">
 
-                                <a href="<?php the_permalink(); ?>">
+                                <a href="#">
                                 <img alt='' width="310" height="205" src='<?php echo get_template_directory_uri(); ?>/assets/images/img2.jpg' />
                                     <span><i class="fa fa-link"></i></span>
                                 </a>
                                
                             </div> <!--end .featured-post-content -->
 
-                            <a href="<?php the_permalink(); ?>">
+                            <a href="#">
 
                                 <h4 class="home-featured-portfolio-title">Portfolio #2</h4>
 
@@ -132,14 +132,14 @@ if (get_theme_mod('tress_front_featured_portfolio_check')) {
 
                             <div class="featured-portfolio-content">
 
-                                <a href="<?php the_permalink(); ?>">
+                                <a href="#">
                                 <img alt='' width="310" height="205" src='<?php echo get_template_directory_uri(); ?>/assets/images/img3.jpg' />
                                     <span><i class="fa fa-link"></i></span>
                                 </a>
                                
                             </div> <!--end .featured-post-content -->
 
-                            <a href="<?php the_permalink(); ?>">
+                            <a href="#">
 
                                 <h4 class="home-featured-portfolio-title">Portfolio #3</h4>
 
