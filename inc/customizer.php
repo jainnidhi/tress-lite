@@ -18,7 +18,8 @@
 function tress_customize_register($wp_customize) {
     
      $wp_customize->get_section( 'header_image'  )->priority     = 26;
-     $wp_customize->get_section( 'nav'  )->priority     = 27;
+     $wp_customize->get_section( 'static_front_page'  )->priority     = 27;
+     $wp_customize->get_section( 'nav'  )->priority     = 28;
 
     /** ===============
      * Extends CONTROLS class to add textarea
@@ -730,7 +731,31 @@ function tress_customize_register($wp_customize) {
         'description' => __('Settings for displaying featured portfolio on Front Page', 'tress'),
         'priority' => 52,
     ));
-    // post Title
+    
+    // enable featured portfolio on front page?
+    $wp_customize->add_setting('tress_front_featured_portfolio_check', array(
+        'default' => 0, 
+        'sanitize_callback' => 'tress_sanitize_checkbox',
+    ));
+    $wp_customize->add_control('tress_front_featured_portfolio_check', array(
+        'label' => __('Show featured portfolio on Front Page', 'tress'),
+        'section' => 'tress_front_page_portfolio_options',
+        'priority' => 1,
+        'type' => 'checkbox',
+    ));
+    
+    $wp_customize->add_setting('tress_hide_sample_portfolio', array(
+        'default' => 1,
+        'sanitize_callback' => 'tress_sanitize_checkbox',
+    ));
+    $wp_customize->add_control('tress_hide_sample_portfolio', array(
+        'label' => __('Hide sample portfolio on Front Page', 'passion'),
+        'section' => 'tress_front_page_portfolio_options',
+        'priority' => 2,
+        'type' => 'checkbox',
+    ));
+    
+    // portfolio Title
         $wp_customize->add_setting('tress_portfolio_title', array(
             'sanitize_callback' => 'sanitize_text_field',
             'transport'=> 'postMessage',
@@ -740,23 +765,11 @@ function tress_customize_register($wp_customize) {
             'label' => __('Section Title', 'tress'),
             'section' => 'tress_front_page_portfolio_options',
             'settings' => 'tress_portfolio_title',
-            'priority' => 1,
+            'priority' => 3,
            
         ));
-       
-    // enable featured portfolio on front page?
-    $wp_customize->add_setting('tress_front_featured_portfolio_check', array(
-        'default' => 0, 
-        'sanitize_callback' => 'tress_sanitize_checkbox',
-    ));
-    $wp_customize->add_control('tress_front_featured_portfolio_check', array(
-        'label' => __('Show featured portfolio on Front Page', 'tress'),
-        'section' => 'tress_front_page_portfolio_options',
-        'priority' => 10,
-        'type' => 'checkbox',
-    ));
+    
 
-    // select number of posts for featured posts on front page
     $wp_customize->add_setting('tress_front_featured_portfolio_count', array(
         'default' => 3,
         'sanitize_callback' => 'sanitize_text_field',
@@ -781,14 +794,70 @@ function tress_customize_register($wp_customize) {
             'priority' => 40,
         ));
     
+        
+        /* ========================================================= */
+        // Add new section for Woocommerce featured products on Front Page
+        /* ========================================================= */
+         if (class_exists('woocommerce')) {
+        $wp_customize->add_section('tress_woo_front_page_options', array(
+            'title' => __('Front Page Woo Products', 'tress'),
+            'description' => __('Settings for displaying featured products on Front Page', 'tress'),
+            'priority' => 53,
+        ));
+        // enable featured products on front page?
+        $wp_customize->add_setting('tress_woo_front_featured_products', array('default' => 0,
+            'sanitize_callback' => 'tress_sanitize_checkbox',
+            ));
+        
+        $wp_customize->add_control('tress_woo_front_featured_products', array(
+            'label' => __('Show featured products on Front Page', 'tress'),
+            'section' => 'tress_woo_front_page_options',
+            'priority' => 10,
+            'type' => 'checkbox',
+        ));
+        // Front featured products section headline
+        $wp_customize->add_setting('tress_woo_front_featured_title', array('default' => __('Latest Products', 'tress'),
+            'sanitize_callback' => 'sanitize_text_field',
+            ));
+        
+        $wp_customize->add_control('tress_woo_front_featured_title', array(
+            'label' => __('Main Title', 'tress'),
+            'section' => 'tress_woo_front_page_options',
+            'settings' => 'tress_woo_front_featured_title',
+            'priority' => 10,
+        ));
+        
+        $wp_customize->add_setting('tress_woo_store_front_count', array('default' => 3,
+             'sanitize_callback' => 'tress_sanitize_integer',
+            ));
+        $wp_customize->add_control('tress_woo_store_front_count', array(
+            'label' => __('Number of products to display', 'tress'),
+            'section' => 'tress_woo_front_page_options',
+            'settings' => 'tress_woo_store_front_count',
+            'priority' => 20,
+        ));
+    }
     
         
         // Add new section for displaying Featured Posts on Front Page
     $wp_customize->add_section('tress_front_page_post_options', array(
         'title' => __('Featured Posts', 'tress'),
         'description' => __('Settings for displaying featured posts on Front Page', 'tress'),
-        'priority' => 55,
+        'priority' => 56,
     ));
+    
+    // enable featured posts on front page?
+        $wp_customize->add_setting('tress_front_featured_posts_check', array(
+            'default' => 1, 
+            'sanitize_callback' => 'tress_sanitize_checkbox',
+        ));
+        $wp_customize->add_control('tress_front_featured_posts_check', array(
+            'label' => __('Show featured posts on Front Page', 'tress'),
+            'section' => 'tress_front_page_post_options',
+            'priority' => 1,
+            'type' => 'checkbox',
+        ));
+        
     // post Title
         $wp_customize->add_setting('tress_post_title', array(
             'sanitize_callback' => 'sanitize_text_field',
@@ -799,22 +868,10 @@ function tress_customize_register($wp_customize) {
             'label' => __('Section Title', 'tress'),
             'section' => 'tress_front_page_post_options',
             'settings' => 'tress_post_title',
-            'priority' => 1,
+            'priority' => 10,
            
         ));
         
-       
-        // enable featured posts on front page?
-        $wp_customize->add_setting('tress_front_featured_posts_check', array(
-            'default' => 1, 
-            'sanitize_callback' => 'tress_sanitize_checkbox',
-        ));
-        $wp_customize->add_control('tress_front_featured_posts_check', array(
-            'label' => __('Show featured posts on Front Page', 'tress'),
-            'section' => 'tress_front_page_post_options',
-            'priority' => 10,
-            'type' => 'checkbox',
-        ));
 
            // select category for featured posts 
         $wp_customize->add_setting('tress_front_featured_posts_cat', array('default' => 0,));
@@ -890,7 +947,7 @@ function tress_customize_register($wp_customize) {
             // Add new section for Home Feedback Title settings
     $wp_customize->add_section('feedback_title_setting', array(
         'title' => __('Testimonial Title', 'tress'),
-        'priority' => 53,
+        'priority' => 54,
     ));
     
     // home Title
@@ -911,7 +968,7 @@ function tress_customize_register($wp_customize) {
         // Add new section for Testimonial slider settings
     $wp_customize->add_section('testimonial_slider_setting', array(
         'title' => __('Testimonial Slider', 'tress'),
-        'priority' => 54,
+        'priority' => 55,
     ));
 
     $wp_customize->add_setting('tslider_one', array(

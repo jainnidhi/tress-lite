@@ -77,7 +77,8 @@ if (get_theme_mod('tress_front_featured_portfolio_check')) {
 
       
 <?php
-} else { // end Featured portfolio query ?>
+} if (!get_theme_mod('tress_front_featured_portfolio_check') && !get_theme_mod('tress_hide_sample_portfolio'))
+    { // end Featured portfolio query ?>
         <div class="home-portfolio-title-area" id="portfolio-title">
             <div class="home-portfolio-title section-title">
                 <h3><?php esc_html_e('Recent Portfolio', 'tress') ?></h3>

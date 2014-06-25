@@ -610,11 +610,6 @@ select {
     border-radius: 3px;
 }
 
-.notification-wrap p{
-    margin:0;
-    text-align:right;
-}
-
 #wrapper {
     width: 100%;
     position: relative;
@@ -1340,6 +1335,30 @@ select {
     background: #0088C7;
     opacity:1;
 }
+
+/* ==========================================================================
+   Front woo products
+   ========================================================================== */
+.home-products{
+    padding:80px 30px;
+}
+
+.home-products h3{
+    text-align:center;
+}
+
+.home-product{
+    position:relative;
+}
+.home-product .product-buttons a{
+    position: absolute;
+    bottom: 9px;
+    right: 0;
+    background: #009cee;
+    padding: 10px;
+    color: #fff;
+}
+
 /* ==========================================================================
    Main Content
    ========================================================================== */
@@ -1423,6 +1442,7 @@ article.sticky .featured-post {
     color: #fff;
     min-width: 50px;
     min-height: 50px;
+    margin-top:-15px;
 }
 .site-content article {
     margin-bottom: 40px;
@@ -2165,7 +2185,7 @@ div.gform_wrapper .ginput_complex label {
     -webkit-transition: all 0.5s ease;
     -khtml-transition: all 0.5s ease;
     -moz-transitiokn: all 0.5s ease;
-    
+
 }
 
 .site-footer a { 
@@ -2419,6 +2439,30 @@ div.gform_wrapper .ginput_complex label {
 .nav-next a:hover{
     color:#009cee;
 }
+
+.site-navigation .fa {
+    font-size: 20px;
+    border-radius: 100%;
+    border: 1px solid #999;
+    padding: 4px 10px;
+}
+
+.site-navigation .fa:hover{
+    background:#009cee;
+    color:#fff;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -khtml-transtransiition: all 0.3s ease;
+    -moz-transitiokn: all 0.3s ease;
+}
+
+.blog .site-navigation .fa{
+    font-size:12px;
+    border-radius:0;
+    border:0px;
+    padding:0;
+}
+
 .nav-next,
 .next-image {
     float: right;
@@ -3011,7 +3055,9 @@ img#wpstats {
 .tress-red .main-navigation ul ul li,
 .tress-red .more-link,
 .tress-red .hentry span.post_format,
-.tress-red .social-meta a
+.tress-red .social-meta a,
+.tress-red .home-product .product-buttons a,
+.tress-red .site-navigation .fa:hover
 {
     background: #c62020;
 }
@@ -3105,7 +3151,9 @@ img#wpstats {
 .tress-green .main-navigation ul ul li,
 .tress-green .more-link,
 .tress-green .hentry span.post_format,
-.tress-green .social-meta a
+.tress-green .social-meta a,
+.tress-green .home-product .product-buttons a,
+.tress-green .site-navigation .fa:hover
 {
     background: #3ac1c2;
 }
@@ -3606,7 +3654,7 @@ img#wpstats {
         text-align:center;
         margin-bottom:10px;
     }
-    
+
     .notification-text,
     .notification-link{
         width:100%;
@@ -3672,18 +3720,18 @@ img#wpstats {
     .slick-nav a{
         padding:10px;
     }
-    
+
     .notification-bar{
         position:relative;
         top:48px;
         z-index:0;
     }
-    
+
     .main-navigation{
         position:fixed;
         top:0;
     }
-    
+
     .slider-wrapper .flex-caption{
         display:none;
     }
