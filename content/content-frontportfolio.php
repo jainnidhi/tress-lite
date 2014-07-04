@@ -95,7 +95,7 @@ if (get_theme_mod('tress_front_featured_portfolio_check')) {
                             <div class="featured-portfolio-content">
 
                                 <a href="#">
-                                <img alt='' width="310" height="205" src='<?php echo get_template_directory_uri(); ?>/assets/images/img1.jpg' />
+                                <img alt='' width="310" height="205" src='<?php echo get_template_directory_uri(); ?>/assets/images/img4.jpg' />
                                     <span><i class="fa fa-link"></i></span>
                                 </a>
                                
@@ -114,7 +114,7 @@ if (get_theme_mod('tress_front_featured_portfolio_check')) {
                             <div class="featured-portfolio-content">
 
                                 <a href="#">
-                                <img alt='' width="310" height="205" src='<?php echo get_template_directory_uri(); ?>/assets/images/img2.jpg' />
+                                <img alt='' width="310" height="205" src='<?php echo get_template_directory_uri(); ?>/assets/images/img5.jpg' />
                                     <span><i class="fa fa-link"></i></span>
                                 </a>
                                
@@ -133,7 +133,7 @@ if (get_theme_mod('tress_front_featured_portfolio_check')) {
                             <div class="featured-portfolio-content">
 
                                 <a href="#">
-                                <img alt='' width="310" height="205" src='<?php echo get_template_directory_uri(); ?>/assets/images/img3.jpg' />
+                                <img alt='' width="310" height="205" src='<?php echo get_template_directory_uri(); ?>/assets/images/img6.jpg' />
                                     <span><i class="fa fa-link"></i></span>
                                 </a>
                                

@@ -28,7 +28,7 @@ get_header();
             
             if ( get_theme_mod('slider_one') =='' ) {  ?>
                 <li>
-                <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/slider1.jpg" alt=""/>
+                <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/slide1.jpg" alt=""/>
                 <div class="flex-caption">
                     <div class="slider-text-container">
                      <h2 class="slider-title"><a href="#"><?php esc_html_e('Showcase Your Restaurant Services', 'tress') ?></a></h2>
@@ -41,7 +41,7 @@ get_header();
                 </li>
                 
                 <li>
-                <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/slider2.jpg" alt=""/>
+                <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/slide2.jpg" alt=""/>
                 <div class="flex-caption">
                     <div class="slider-text-container">
                      <h2 class="slider-title"><a href="#"><?php esc_html_e('Showcase Your Restaurant Services', 'tress') ?></a></h2>
@@ -139,7 +139,7 @@ get_header();
                     <?php if ( get_theme_mod('home_featured_one') !='' ) {  ?>
                      <div class="featured-image"><img src="<?php echo get_theme_mod('home_featured_one'); ?>" /></div>
                     <?php } else {  ?>
-                     <div class="featured-image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img1.jpg" /></div>
+                     <div class="featured-image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/feature1.jpg" /></div>
                      <?php } ?>
 
 
@@ -164,7 +164,7 @@ get_header();
                     <?php if ( get_theme_mod('home_featured_two') !='' ) {  ?>
                      <div class="featured-image"><img src="<?php echo get_theme_mod('home_featured_two'); ?>" /></div>
                     <?php } else {  ?>
-                     <div class="featured-image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img2.jpg" /></div>
+                     <div class="featured-image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/feature2.jpg" /></div>
                      <?php } ?>
 
 
@@ -190,7 +190,7 @@ get_header();
                     <?php if ( get_theme_mod('home_featured_three') !='' ) {  ?>
                      <div class="featured-image"><img src="<?php echo get_theme_mod('home_featured_three'); ?>" /></div>
                     <?php } else {  ?>
-                     <div class="featured-image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img3.jpg" /></div>
+                     <div class="featured-image"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img1.jpg" /></div>
                      <?php } ?>
 
 
